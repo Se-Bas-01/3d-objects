@@ -15,7 +15,7 @@ function clear() {
 function point({x, y}) {
     const s = 20;
     ctx.fillStyle = FOREGROUND;
-    ctx.fillRect(x, y, s, s);
+    ctx.fillRect(x - s/2, y - s/2, s, s);
 };
 
 function screen(p) {
