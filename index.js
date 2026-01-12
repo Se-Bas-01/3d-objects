@@ -18,5 +18,12 @@ function point(x, y) {
     ctx.fillRect(x, y, s, s);
 };
 
+function screen(p) {
+    return {
+        x: (p.x + 1)/2*game.width,
+        y: (p.x + 1)/2*game.height,
+    }
+}
+
 clear();
 point(100, 100);
