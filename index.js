@@ -33,21 +33,30 @@ function project({x, y, z}) {
 }
 
 const FPS = 60;
-let dz = 0;
+let dz = 1;
 
 const vs = [
-    {x: 0.5, y: 0.5, z: 1 },
-    {x: -0.5, y: 0.5, z: 1 },
-    {x: 0.5, y: -0.5, z: 1 },
-    {x: -0.5, y: -0.5, z: 1 },
+    {x: 0.5, y: 0.5, z: 0.5 },
+    {x: -0.5, y: 0.5, z: 0.5 },
+    {x: 0.5, y: -0.5, z: 0.5 },
+    {x: -0.5, y: -0.5, z: 0.5 },
+
+    {x: 0.5, y: 0.5, z: -0.5 },
+    {x: -0.5, y: 0.5, z: -0.5 },
+    {x: 0.5, y: -0.5, z: -0.5 },
+    {x: -0.5, y: -0.5, z: -0.5 },
 ]
+
+function translate_z({x, y, z}) {
+    return { x, y, z: + dz};
+};
 
 function frame() {
     const dt = 1/FPS;
     dz += 1 * dt;
     clear();
     for (const v of vs) {
-        point(screen(project(v)));
+        point(screen(project(translate_z(v, dz))));
     }
     setTimeout(frame, 1000 / FPS);
 };
