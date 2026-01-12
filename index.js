@@ -35,14 +35,20 @@ function project({x, y, z}) {
 const FPS = 60;
 let dz = 0;
 
+const vs = [
+    {x: 0.5, y: 0.5, z: 1 },
+    {x: -0.5, y: 0.5, z: 1 },
+    {x: 0.5, y: -0.5, z: 1 },
+    {x: -0.5, y: -0.5, z: 1 },
+]
+
 function frame() {
     const dt = 1/FPS;
     dz += 1 * dt;
     clear();
-    point(screen(project({x: 0.5, y: 0.5, z: 1 + dz})));
-    point(screen(project({x: -0.5, y: 0.5, z: 1 + dz})));
-    point(screen(project({x: 0.5, y: -0.5, z: 1 + dz})));
-    point(screen(project({x: -0.5, y: -0.5, z: 1 + dz})));
+    for (const v of vs) {
+        point(screen(project(v)));
+    }
     setTimeout(frame, 1000 / FPS);
 };
 setTimeout(frame, 1000 / FPS);
