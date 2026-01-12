@@ -32,5 +32,11 @@ function project({x, y, z}) {
   }  
 }
 
-clear();
-point(screen(project({x: 0, y: 0, z: 1})));
+const FPS = 60;
+let dz = 0;
+
+function frame() {
+    clear();
+    point(screen(project({x: 0, y: 0, z: 1})));
+};
+setTimeout(frame, 1000/FPS);
