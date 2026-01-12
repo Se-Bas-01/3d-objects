@@ -12,7 +12,7 @@ function clear() {
     ctx.fillRect(0, 0, game.width, game.height);
 };
 
-function point(x, y) {
+function point({x, y}) {
     const s = 20;
     ctx.fillStyle = FOREGROUND;
     ctx.fillRect(x, y, s, s);
@@ -26,4 +26,4 @@ function screen(p) {
 }
 
 clear();
-point(100, 100);
+point({x: 100, y: 100});
