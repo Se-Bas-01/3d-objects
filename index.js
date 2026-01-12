@@ -21,7 +21,7 @@ function point({x, y}) {
 function screen(p) {
     return {
         x: (p.x + 1)/2*game.width,
-        y: (p.x + 1)/2*game.height,
+        y: (1 - (p.x + 1))/2*game.height,
     }
 }
 
