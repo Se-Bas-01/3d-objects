@@ -26,4 +26,4 @@ function screen(p) {
 }
 
 clear();
-point({x: 100, y: 100});
+point(screen({x: 0, y: 0}));
