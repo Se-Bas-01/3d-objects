@@ -25,5 +25,12 @@ function screen(p) {
     }
 }
 
+function project({x, y, z}) {
+  return {
+    x: x/z,
+    y: y/z,
+  }  
+}
+
 clear();
 point(screen({x: 0, y: 0}));
