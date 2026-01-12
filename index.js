@@ -48,7 +48,7 @@ const vs = [
 ]
 
 function translate_z({x, y, z}, dz) {
-    return { x, y, z: + dz};
+    return { x, y, z: z + dz};
 };
 
 function frame() {
