@@ -47,7 +47,7 @@ const vs = [
     {x: -0.5, y: -0.5, z: -0.5 },
 ]
 
-function translate_z({x, y, z}) {
+function translate_z({x, y, z}, dz) {
     return { x, y, z: + dz};
 };
 
