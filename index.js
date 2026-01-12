@@ -39,7 +39,7 @@ function frame() {
     const dt = 1/FPS;
     dz += 1*dt
     clear();
-    point(screen(project({x: 0, y: 0, z: 2})));
+    point(screen(project({x: 0.5, y: 0, z: 2})));
     setTimeout(frame, 1000/FPS);
 };
 setTimeout(frame, 1000/FPS);
