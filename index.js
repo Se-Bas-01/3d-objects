@@ -66,6 +66,7 @@ const vs = [
 function frame() {
     const dt = 1/FPS;
     dz += 1 * dt;
+    angle += 2*Math.PI+dt;
     clear();
     for (const v of vs) {
         point(screen(project(translate_z(rotate_xz(v, angle), dz))));
