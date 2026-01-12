@@ -13,8 +13,9 @@ function clear() {
 };
 
 function point(x, y) {
+    const s = 20;
     ctx.fillStyle = FOREGROUND;
-    ctx.fillRect(x, y, 100, 100);
+    ctx.fillRect(x, y, s, s);
 };
 
 clear();
