@@ -33,4 +33,4 @@ function project({x, y, z}) {
 }
 
 clear();
-point(screen({x: 0, y: 0}));
+point(screen(project({x: 0, y: 0, z: 0})));
