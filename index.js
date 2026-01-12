@@ -14,5 +14,5 @@ function clear() {
 
 function point(x, y) {
     ctx.fillStyle = FOREGROUND;
-    ctx.fillRect(0, 0, 100, 100);
+    ctx.fillRect(x, y, 100, 100);
 }
