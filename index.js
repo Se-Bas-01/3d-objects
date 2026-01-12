@@ -52,21 +52,21 @@ function rotate_xz({x, y, z}, angle) {
 }
 
 const vs = [
-    {x: 0.5, y: 0.5, z: 0.5 },
-    {x: -0.5, y: 0.5, z: 0.5 },
-    {x: 0.5, y: -0.5, z: 0.5 },
-    {x: -0.5, y: -0.5, z: 0.5 },
+    {x: 0.25, y: 0.25, z: 0.25 },
+    {x: -0.25, y: 0.25, z: 0.25 },
+    {x: 0.25, y: -0.25, z: 0.25 },
+    {x: -0.25, y: -0.25, z: 0.25 },
 
-    {x: 0.5, y: 0.5, z: -0.5 },
-    {x: -0.5, y: 0.5, z: -0.5 },
-    {x: 0.5, y: -0.5, z: -0.5 },
-    {x: -0.5, y: -0.5, z: -0.5 },
+    {x: 0.25, y: 0.25, z: -0.25 },
+    {x: -0.25, y: 0.25, z: -0.25 },
+    {x: 0.25, y: -0.25, z: -0.25 },
+    {x: -0.25, y: -0.25, z: -0.25 },
 ]
 
 function frame() {
     const dt = 1/FPS;
-    dz += 1 * dt;
-    angle += 2*Math.PI+dt;
+    //dz += 1 * dt;
+    angle += 1 * Math.PI * dt;
     clear();
     for (const v of vs) {
         point(screen(project(translate_z(rotate_xz(v, angle), dz))));
